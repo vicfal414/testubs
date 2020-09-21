@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset = "UTF-8">
+	<style>
+	ul
+	{
+		top: 0;
+		width: 100%
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+	
+	li
+	{
+		display:inline;
+		float:left;
+		border-right: 1px solid #bbb;
+	}
+	
+	li:last-child
+	{
+		border-right:none;
+	}
+	
+	li a 
+	{
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}	
+	
+	li a:hover:not(.active) 
+	{
+		background-color: #111;
+	}	
+	
+	.active 
+	{
+		background-color: #4CAF50;
+	}
+	
+	table, th, td 
+	{
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	th, td 
+	{
+		padding: 5px;
+		text-align: left;
+	}
+	
+	body 
+	{
+		background-image: url('');
+	}
+	</style>
+	<!--Scripts go here-->
+	<!--Scripts end here-->
+		<title>Homepage</title>
+	</head>
+	
+	<body>
+		<ul> <!-- Navbar, thanks w3school -->
+			<li><a class = "active" href = "index.html">Home</a></li>
+			<li><a href = "index.html">Challenges</a></li>
+			<li><a href = "index.html">Friends</a></li>
+			<li style = "float:right"><a href = "index.html">Sign In</a></li>
+		</ul>
+		
+		<h1>Welcome to <b>(yo)ub sustainable</b></h1>
+		
+		<h2>Mission Statement</h2>
+		<div>Mission Statement lmao</div>
+		
+		<table style = "width:100%">
+			<caption><b>Challenges</b></caption>
+			<tr>
+				<th>Challenge Type</th>
+				<th>Challenge</th>
+				<th>Progress</th>
+			</tr>
+			<tr>
+				<td>Daily</td>
+				<td>Refill Personal Bottle</td>
+				<td>Complete</td>
+			</tr>	
+			<tr>
+				<td>Weekly</td>
+				<td>Complete 5 Daily Challenges</td>
+				<td>In Progress</td>
+			</tr>
+			<tr>
+				<td>Monthly</td>
+				<td>Recycle 30 bottles</td>
+				<td>In Progress</td>
+			</tr>
+		</table>
+	
+	
+	<body>
+</html>

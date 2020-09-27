@@ -16,6 +16,21 @@ h3{
   font-size: 20pt;
   /* font-weight:900; */
 }
+
+/* For UJ - visula green blocks*/
+h4{
+  font-family: 'Roboto', sans-serif;
+  font-size: 200pt;
+  font-weight: bold;
+}
+
+/* For UJ - smaller title font*/
+h5{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
 p{
   font-family: 'Roboto', sans-serif;
   color: #000000;

@@ -1,38 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@vicfal414 
-UB-CSE
-/
-course-project-yo-ub_sustainable
-3
-0
-1
-Code
-Issues
-20
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-course-project-yo-ub_sustainable/flaskr/main.py /
-@lisakanbur
-lisakanbur Fixing some flask stuff
-Latest commit 55a53b8 7 minutes ago
- History
- 2 contributors
-@lisakanbur@vicfal414
-94 lines (75 sloc)  2.62 KB
-  
 import os
 
 from flask import Flask

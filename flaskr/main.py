@@ -10,8 +10,8 @@ from flask import session
 from flask import flash
 # from flask_mysqldb import MySQL
 # from flask_mysql import MySQL
-import pymysql
-# import pymysql.cursors
+# import pymysql
+import pymysql.cursors
 
 import random
 from users import Users

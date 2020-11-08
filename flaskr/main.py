@@ -14,19 +14,22 @@ from flaskext.mysql import MySQL
 import random
 from users import Users
 
+mysql = MySQL()
+
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev',
-        MYSQL_HOST='us-cdbr-east-02.cleardb.com',
+        MYSQL_DATABASE_HOST='us-cdbr-east-02.cleardb.com',
         # MYSQL_PORT=15551,
-        MYSQL_USER='b2cb10b2b21b72',
-        MYSQL_PASSWORD='1b8b9cc5',
-        MYSQL_DB='heroku_318469e412eb0ae'
+        MYSQL_DATABSE_USER='b2cb10b2b21b72',
+        MYSQL_DATABASE_PASSWORD='1b8b9cc5',
+        MYSQL_DATABASE_DB='heroku_318469e412eb0ae'
     )
 
-    mysql = MySQL(app)
+    mysql.init_app(app)
+   
 
     if test_config is None:
         # load the instance config, if it exists, when not testing

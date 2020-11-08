@@ -11,6 +11,7 @@ from flask import flash
 # from flask_mysqldb import MySQL
 # from flask_mysql import MySQL
 # import pymysql
+import MySQLdb
 import pymysql.cursors
 
 import random

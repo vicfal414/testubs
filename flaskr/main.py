@@ -156,7 +156,7 @@ def create_app(test_config=None):
             data = cursor2.fetchone()
             if data:
                 # Account already exists
-                msg = 'Account already exists.'z
+                msg = 'Account already exists.'
             elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
                 # Invalid email address
                 msg = 'Inavlid email address.'

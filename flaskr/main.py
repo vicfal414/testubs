@@ -167,12 +167,15 @@ def create_app(test_config=None):
                 # Form was not filled out
                 msg = 'Please enter your information.'
             else:
-                cursor2.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s)', (username, password, email,))
+                with connection2.cursor() as cursor3:
+                    cursor3.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s)', (username, password, email,))
                 connection2.commit()
                 msg = 'You have successfully registered!'
+            connection2.close()
         elif request.method == 'POST':
             #Form is empty
             msg = 'Please enter your information.'
+        
         return render_template("signup.html", msg = msg)
 
     @app.route("/css")

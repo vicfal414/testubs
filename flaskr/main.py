@@ -56,11 +56,11 @@ def create_app(test_config=None):
     @app.route("/challenge")
     def chall():
         return render_template("challenge_list.html")
-
+    
     @app.route("/challenge1")
     def chall_pg1():
         return render_template("challenge_pages/challenge1.html")
-
+    
     @app.route("/challenge2")
     def chall_pg2():
         return render_template("challenge_pages/challenge2.html")
@@ -76,13 +76,13 @@ def create_app(test_config=None):
     @app.route("/challenge5")
     def chall_pg5():
         return render_template("challenge_pages/challenge5.html")
-
+    
     @app.route("/challenge6")
     def chall_pg6():
         return render_template("challenge_pages/challenge6.html")
 
     @app.route("/friends")
-    def friend():
+    def friend():  
         return render_template("friends.html",
             friendList=Users['friends'],
             notFriendList=Users['notFriends'])
@@ -97,19 +97,6 @@ def create_app(test_config=None):
 
 
     @app.route("/login", methods = ['GET', 'POST'])
-        return render_template("friends.html")
-    @app.route("/publicProfileFriend")
-    def publicProfileFriend():
-        return render_template("publicProfileFriend.html")
-
-    @app.route("/publicProfileNotFriend")
-    def publicProfileNotFriend():
-        return render_template("publicProfileNotFriend.html")
-  #  @app.route("/login")
-  #  def login():
-  #      return render_template("login.html")
-    
-    @app.route('/login', methods=['GET', 'POST'])
     def login():
         msg = ''
         if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
@@ -128,7 +115,7 @@ def create_app(test_config=None):
             else:
                 msg = 'Invalid Credentials. Please try again.'
         return render_template("login.html", msg = msg)
-
+    
     # @app.route('/login', methods=['GET', 'POST'])
     # def login():
     #     error = None
@@ -139,7 +126,7 @@ def create_app(test_config=None):
     #             flash('You are logged in.')
     #             return redirect(url_for('home'))
     #     return render_template('login.html', error=error)
-
+     
     @app.route('/logout')
     def logout():
         session.pop('logged_in', None)
@@ -181,14 +168,14 @@ def create_app(test_config=None):
 
     @app.route("/css")
     def css():
-        return render_template("static/css/style.css")
-
+        return render_template("static/css/style.css") 
+    
     @app.route("/random")
     def rand_chall():
         number = random.randint(1, 6)
         site = "chall_pg" + str(number)
         return redirect(url_for(site))
-
+        
     def getUserName(name):
         for uType in Users:
             for user in Users[uType]:
@@ -202,7 +189,7 @@ def create_app(test_config=None):
                 if user['name'] == name:
                     return user['profilePic']
         return None
-
+    
     @app.route("/addFriend", methods = ['POST'])
     def addFriend():
         if request.method == 'POST':
@@ -211,7 +198,7 @@ def create_app(test_config=None):
             Users['friends'].append(newFriend)
             Users['notFriends'].remove(newFriend)
         return redirect(url_for('friend'))
-
+      
     @app.route("/remFriend", methods = ['POST'])
     def remFriend():
         if request.method == 'POST':

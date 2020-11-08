@@ -83,7 +83,6 @@ def create_app(test_config=None):
 
     @app.route("/friends")
     def friend():
-<<<<<<< HEAD
         return render_template("friends.html",
             friendList=Users['friends'],
             notFriendList=Users['notFriends'])
@@ -98,7 +97,6 @@ def create_app(test_config=None):
 
 
     @app.route("/login", methods = ['GET', 'POST'])
-=======
         return render_template("friends.html")
     @app.route("/publicProfileFriend")
     def publicProfileFriend():
@@ -112,7 +110,6 @@ def create_app(test_config=None):
   #      return render_template("login.html")
     
     @app.route('/login', methods=['GET', 'POST'])
->>>>>>> 4ce7d33072f1a5b8118ef9953efc30b89a6a1c59
     def login():
         msg = ''
         if request.method == 'POST' and 'username' in request.form and 'password' in request.form:

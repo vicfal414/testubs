@@ -8,7 +8,8 @@ from flask import redirect
 from flask import url_for
 from flask import session
 from flask import flash
-from flask_mysqldb import MySQL
+# from flask_mysqldb import MySQL
+from flaskext.mysql import MySQL
 
 import random
 from users import Users
@@ -18,11 +19,11 @@ def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev',
-        MYSQL_HOST='2.tcp.ngrok.io',
-        MYSQL_PORT=15551,
-        MYSQL_USER='root',
-        MYSQL_PASSWORD='passwrd',
-        MYSQL_DB='login'
+        MYSQL_HOST='us-cdbr-east-02.cleardb.com',
+        # MYSQL_PORT=15551,
+        MYSQL_USER='b2cb10b2b21b72',
+        MYSQL_PASSWORD='1b8b9cc5',
+        MYSQL_DB='heroku_318469e412eb0ae'
     )
 
     mysql = MySQL(app)

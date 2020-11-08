@@ -8,7 +8,7 @@ from flask import redirect
 from flask import url_for
 from flask import session
 from flask import flash
-from flask_mysqldb import MySQL
+from Flask-MySQLdb import MySQL
 
 import random
 from users import Users
